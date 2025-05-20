@@ -14,20 +14,21 @@ export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    // Check if user is already logged in
     const checkAuthStatus = async () => {
       try {
         const token = localStorage.getItem("drawingBattleToken")
+        console.log("Checking auth, token:", token)
 
         if (token) {
           api.defaults.headers.common["Authorization"] = `Bearer ${token}`
-
           const response = await api.get("/auth/me")
+          console.log("Auth me response:", response.data)
           setCurrentUser(response.data)
+        } else {
+          console.log("No token found")
         }
       } catch (error) {
         console.error("Auth check failed", error)
-        // Clear invalid token
         localStorage.removeItem("drawingBattleToken")
         api.defaults.headers.common["Authorization"] = ""
       } finally {
