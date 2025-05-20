@@ -1,13 +1,18 @@
-// vite.config.js
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-
-export default defineConfig({
-  plugins: [react()],
-  build: {
-    outDir: 'dist'
-  },
-  server: {
-    historyApiFallback: true
-  }
-});
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/((?!.*\\.[^/]+$).*)",
+      "destination": "/index.html"
+    }
+  ]
+}
