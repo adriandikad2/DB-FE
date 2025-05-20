@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/login", "destination": "/index.html" },
+    { "source": "/register", "destination": "/index.html" },
+    { "source": "/lobby", "destination": "/index.html" },
+    { "source": "/create-room", "destination": "/index.html" },
+    { "source": "/join-room", "destination": "/index.html" },
+    { "source": "/room/:roomId", "destination": "/index.html" },
+    { "source": "/round/:roomId", "destination": "/index.html" },
+    { "source": "/voting/:roomId", "destination": "/index.html" },
+    { "source": "/leaderboard/:roomId", "destination": "/index.html" },
+    { "source": "/profile", "destination": "/index.html" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
