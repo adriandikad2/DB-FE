@@ -451,9 +451,12 @@ function HomePage() {
       display: 'flex',
       flexDirection: 'row',
       alignItems: 'center',
+      justifyContent: 'center',
       padding: '4rem 2rem',
       position: 'relative',
       minHeight: '80vh',
+      maxWidth: '1200px',
+      margin: '0 auto',
       '@media (max-width: 768px)': {
         flexDirection: 'column-reverse',
         padding: '1rem 1rem 2rem',
@@ -465,6 +468,7 @@ function HomePage() {
       maxWidth: '600px',
       position: 'relative',
       zIndex: 2,
+      marginRight: '2rem',
       '@media (max-width: 768px)': {
         width: '100%',
         maxWidth: '100%',
@@ -472,7 +476,8 @@ function HomePage() {
         flexDirection: 'column',
         alignItems: 'center',
         marginTop: '1rem',
-        padding: '0 0.75rem', // Add some horizontal padding
+        marginRight: '0',
+        padding: '0 0.75rem',
       },
     },    heroTitle: {
       fontSize: '3.5rem',
