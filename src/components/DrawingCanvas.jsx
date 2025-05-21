@@ -393,7 +393,7 @@ function DrawingCanvas({ onSave, timeLeft, disabled = false }) {
           onTouchEnd={stopDrawing}
           className={`drawing-canvas ${disabled ? "disabled" : ""}`}
         />
-      </div>
+      </div>      
       
       {!disabled && (
         <div className="canvas-actions">
