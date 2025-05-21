@@ -41,11 +41,13 @@ function PageTransition({ children }) {
       exit="exit"
       variants={pageVariants}
       style={{ 
-        width: "100vw", 
+        position: "absolute",
+        width: "100%",
         minHeight: "100vh",
+        left: 0,
+        top: 0,
         display: "flex",
-        flexDirection: "column",
-        overflow: "hidden"
+        flexDirection: "column"
       }}
     >
       {children}
