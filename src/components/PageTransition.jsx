@@ -40,7 +40,13 @@ function PageTransition({ children }) {
       animate="animate"
       exit="exit"
       variants={pageVariants}
-      style={{ width: "100%", height: "100%" }}
+      style={{ 
+        width: "100vw", 
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        overflow: "hidden"
+      }}
     >
       {children}
     </motion.div>
